@@ -2,10 +2,12 @@ body {
   font-family: "Montserrat", sans-serif;
   font-family: "Poppins", sans-serif;
   background-color: hsl(219, 48%, 8%);
-  height: 1000px;
 }
 body::-webkit-scrollbar {
   height: 20px;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 @tailwind base;

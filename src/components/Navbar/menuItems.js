@@ -2,26 +2,26 @@ export const menuItems = [
   {
     id: 0,
     icon: "bx bx-home-alt",
-    url: "/",
+    url: "#home",
   },
   {
     id: 1,
     icon: "bx bx-user",
-    url: "/",
+    url: "#about",
   },
   {
     id: 2,
     icon: "bx bx-book",
-    url: "/",
+    url: "#skill",
   },
   {
     id: 3,
     icon: "bx bx-briefcase-alt",
-    url: "/",
+    url: "#portfolio",
   },
   {
     id: 4,
     icon: "bx bx-message-minus",
-    url: "/",
+    url: "#contact",
   },
 ];

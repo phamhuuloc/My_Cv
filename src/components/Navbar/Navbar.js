@@ -14,20 +14,22 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <>
+    <div className="fixed top-[0] left-0 w-full bg-[hsl(219,48%,8%)] z-[999]">
       <nav
         className={
           offset >= 50
-            ? "flex justify-between items-center h-[56px] p-[10px] shadow-3xl fixed w-screen bg-[hsl(219,48%,8%)  ] "
-            : "flex justify-between items-center h-[56px] p-[10px] fixed w-screen bg-[hsl(219,48%,8%)] "
+            ? "flex justify-between items-center h-[56px] p-[10px] shadow-3xl w-screen    "
+            : "flex justify-between items-center h-[56px] p-[10px]  w-screen  "
         }
       >
-        <a className=" text-[16px] text-[#59d9cc]">Trang chủ</a>
+        <a className=" text-[16px] text-[#59d9cc]" href="#home">
+          Trang chủ
+        </a>
         <ul className="fixed flex justify-between items-center bottom-[1rem] px-[1rem] py-[1.2rem] bg-[hsl(219,32%,16%,0.8)] w-[90%] left-0 right-0 mx-auto rounded-[100px]">
           {menuItems.map((item, index) => {
             return (
               <li key={index}>
-                <a className="p-[0.4rem] ">
+                <a className="p-[0.4rem] " href={item.url}>
                   <i
                     onClick={() => handleOnClick(index)}
                     className={
@@ -43,7 +45,7 @@ const Navbar = () => {
         </ul>
         <i className="bx bx-moon  text-xl text-[hsl(219,8%,75%)] cursor-pointer "></i>
       </nav>
-    </>
+    </div>
   );
 };
 export default Navbar;
